@@ -74,6 +74,9 @@ public class FingerFactory {
 			 * window), we store the current chunk fingerprint and reset the
 			 * chunk fingerprinter.
 			 */
+//			if(b==13 || b=='N'){
+//				System.out.println("b is newline or 'N' ");
+//			}
 			if (boundaryDetector.isBoundary(window)) {
 				visitor.visit(finger.getFingerprintLong(), chunkStart, chunkEnd);
 				finger.reset();
